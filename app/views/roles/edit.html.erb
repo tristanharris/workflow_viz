@@ -1,0 +1,4 @@
+<%= render_super(__FILE__) %>
+<br style='clear: both'>
+<%= WorkflowViz::Graph.draw(@role, :all).html_safe if @role %>
+

@@ -1,0 +1,4 @@
+<%= render :template => 'workflows/edit' %>
+<br>
+
+<%= WorkflowViz::Graph.draw(@role, @tracker).html_safe if @role && @tracker %>

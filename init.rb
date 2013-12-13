@@ -7,6 +7,5 @@ Redmine::Plugin.register :workflow_viz do
 end
 
 Rails.configuration.to_prepare do
-  #WorkflowsController.send(:include, WorkflowViz::WorkflowControllerPatch) unless WorkflowsController.included_modules.include?(WorkflowViz::WorkflowControllerPatch)
-  WorkflowsController.send(:helper, WorkflowViz::ViewHelper)
+  ApplicationController.send(:helper, WorkflowViz::ViewHelper)
 end
